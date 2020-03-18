@@ -113,6 +113,6 @@ void Cexample3View::OnLButtonUp(UINT nFlags, CPoint point)
 	Cexample3Doc* pDoc = GetDocument();
 	pDoc->rc.right = point.x;
 	pDoc->rc.bottom = point.y;
-	InvalidateRect(NULL, TRUE);
+	InvalidateRect(NULL, TRUE);//Ç¿ÖÆÖØ»æ
 	CView::OnLButtonUp(nFlags, point);
 }
