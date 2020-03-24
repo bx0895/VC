@@ -38,7 +38,6 @@ public:
 	POINT m_point;
 	POINT n_point;
 	CRect a;
-	CRect b;
 	int set;
 protected:
 

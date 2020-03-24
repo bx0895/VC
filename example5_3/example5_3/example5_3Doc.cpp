@@ -36,8 +36,6 @@ Cexample5_3Doc::Cexample5_3Doc()
 	n_point.y = 0;
 	a.left = 0;   a.top = 0;
 	a.right = 0;  a.bottom = 0;
-	b.left = 0;   b.top = 0;
-	b.right = 0;  b.bottom = 0;
 	set = 0;
 }
 
