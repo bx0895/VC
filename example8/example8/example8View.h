@@ -42,6 +42,7 @@ protected:
 public:
 	afx_msg void OnPuout();
 	afx_msg void OnClose();
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
 };
 
 #ifndef _DEBUG  // example8View.cpp 中的调试版本

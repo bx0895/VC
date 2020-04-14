@@ -24,6 +24,7 @@ IMPLEMENT_DYNCREATE(Cexample8View, CView)
 BEGIN_MESSAGE_MAP(Cexample8View, CView)
 	ON_COMMAND(ID_Puout, &Cexample8View::OnPuout)
 	ON_COMMAND(ID_Close, &Cexample8View::OnClose)
+	ON_WM_LBUTTONDOWN()
 END_MESSAGE_MAP()
 
 // Cexample8View 构造/析构
@@ -57,10 +58,7 @@ void Cexample8View::OnDraw(CDC* pDC)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
-	if (show == 0)
-	{
-		pDC->TextOutW(200,200,_T("你已退出对话框"));
-	}
+	
 }
 
 
@@ -91,18 +89,29 @@ Cexample8Doc* Cexample8View::GetDocument() const // 非调试版本是内联的
 void Cexample8View::OnPuout()
 {
 	// TODO: 在此添加命令处理程序代码
-	MyDialog *pd= new MyDialog;
-	pd->Create(IDD_DIALOG1);
-	pd->ShowWindow(1);
-	show = 1;
+	CClientDC dc(this);
+	MyDialog dlg;
+	int r = dlg.DoModal();
+	if (r == IDOK || r == IDCANCEL)
+	{
+		
+		dc.TextOutW(300, 200, _T("你已退出对话框"));
+
+	}
+	
 }
 
 
 void Cexample8View::OnClose()
 {
 	// TODO: 在此添加命令处理程序代码
-	MyDialog *pd = new MyDialog;
-	pd->Create(IDD_DIALOG1);
-	pd->ShowWindow(0);
-	show = 0;
+	
+}
+
+
+void Cexample8View::OnLButtonDown(UINT nFlags, CPoint point)
+{
+	// TODO: 在此添加消息处理程序代码和/或调用默认值
+	Invalidate();
+	CView::OnLButtonDown(nFlags, point);
 }
