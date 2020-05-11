@@ -9,3 +9,4 @@ char* pchar()
 int F1::GetA() {
 	return a + 1;
 }
+

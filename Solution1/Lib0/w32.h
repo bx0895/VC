@@ -7,4 +7,5 @@ class F1 {
 public:
 	F1() { a = 100; }
 	int GetA();
+	
 };
