@@ -1,5 +1,5 @@
 
-// example9_1.h : example9_1 应用程序的主头文件
+// MFC0.h : MFC0 应用程序的主头文件
 //
 #pragma once
 
@@ -10,14 +10,14 @@
 #include "resource.h"       // 主符号
 
 
-// Cexample9_1App:
-// 有关此类的实现，请参阅 example9_1.cpp
+// CMFC0App:
+// 有关此类的实现，请参阅 MFC0.cpp
 //
 
-class Cexample9_1App : public CWinApp
+class CMFC0App : public CWinApp
 {
 public:
-	Cexample9_1App();
+	CMFC0App();
 
 
 // 重写
@@ -30,4 +30,4 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 
-extern Cexample9_1App theApp;
+extern CMFC0App theApp;

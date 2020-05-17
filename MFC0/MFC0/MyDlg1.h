@@ -1,20 +1,19 @@
 #pragma once
-#include "afxwin.h"
 
 
-// MyDlg2 对话框
+// MyDlg1 对话框
 
-class MyDlg2 : public CDialogEx
+class MyDlg1 : public CDialogEx
 {
-	DECLARE_DYNAMIC(MyDlg2)
+	DECLARE_DYNAMIC(MyDlg1)
 
 public:
-	MyDlg2(CWnd* pParent = NULL);   // 标准构造函数
-	virtual ~MyDlg2();
+	MyDlg1(CWnd* pParent = NULL);   // 标准构造函数
+	virtual ~MyDlg1();
 
 // 对话框数据
 #ifdef AFX_DESIGN_TIME
-	enum { IDD = IDD_DIALOG2 };
+	enum { IDD = IDD_DIALOG1 };
 #endif
 
 protected:
@@ -22,7 +21,6 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 public:
-	CString put;
 	afx_msg void OnBnClickedButton1();
-	CListBox LBox;
+	CString str_name;
 };

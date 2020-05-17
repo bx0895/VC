@@ -1,16 +1,16 @@
 
-// example9_1Doc.h : Cexample9_1Doc 类的接口
+// MFC0Doc.h : CMFC0Doc 类的接口
 //
 
 
 #pragma once
 
 
-class Cexample9_1Doc : public CDocument
+class CMFC0Doc : public CDocument
 {
 protected: // 仅从序列化创建
-	Cexample9_1Doc();
-	DECLARE_DYNCREATE(Cexample9_1Doc)
+	CMFC0Doc();
+	DECLARE_DYNCREATE(CMFC0Doc)
 
 // 特性
 public:
@@ -29,7 +29,7 @@ public:
 
 // 实现
 public:
-	virtual ~Cexample9_1Doc();
+	virtual ~CMFC0Doc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

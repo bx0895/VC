@@ -1,31 +1,31 @@
 ﻿================================================================================
-    MICROSOFT 基础类库 : example9_1 项目概述
+    MICROSOFT 基础类库 : MFC0 项目概述
 ===============================================================================
 
-应用程序向导已为您创建了此 example9_1 应用程序。此应用程序不仅演示 Microsoft 基础类的基本使用方法，还可作为您编写应用程序的起点。
+应用程序向导已为您创建了此 MFC0 应用程序。此应用程序不仅演示 Microsoft 基础类的基本使用方法，还可作为您编写应用程序的起点。
 
-本文件概要介绍组成 example9_1 应用程序的每个文件的内容。
+本文件概要介绍组成 MFC0 应用程序的每个文件的内容。
 
-example9_1.vcxproj
+MFC0.vcxproj
     这是使用应用程序向导生成的 VC++ 项目的主项目文件，其中包含生成该文件的 Visual C++ 的版本信息，以及有关使用应用程序向导选择的平台、配置和项目功能的信息。
 
-example9_1.vcxproj.filters
+MFC0.vcxproj.filters
     这是使用“应用程序向导”生成的 VC++ 项目筛选器文件。它包含有关项目文件与筛选器之间的关联信息。在 IDE 中，通过这种关联，在特定节点下以分组形式显示具有相似扩展名的文件。例如，“.cpp”文件与“源文件”筛选器关联。
 
-example9_1.h
+MFC0.h
     这是应用程序的主头文件。
-    其中包括其他项目特定的标头（包括 Resource.h），并声明 Cexample9_1App 应用程序类。
+    其中包括其他项目特定的标头（包括 Resource.h），并声明 CMFC0App 应用程序类。
 
-example9_1.cpp
-    这是包含应用程序类 Cexample9_1App 的主应用程序源文件。
+MFC0.cpp
+    这是包含应用程序类 CMFC0App 的主应用程序源文件。
 
-example9_1.rc
+MFC0.rc
     这是程序使用的所有 Microsoft Windows 资源的列表。它包括 RES 子目录中存储的图标、位图和光标。此文件可以直接在 Microsoft Visual C++ 中进行编辑。项目资源包含在 2052 中。
 
-res\example9_1.ico
-    这是用作应用程序图标的图标文件。此图标包括在主资源文件 example9_1.rc 中。
+res\MFC0.ico
+    这是用作应用程序图标的图标文件。此图标包括在主资源文件 MFC0.rc 中。
 
-res\example9_1.rc2
+res\MFC0.rc2
     此文件包含不在 Microsoft Visual C++ 中进行编辑的资源。您应该将不可由资源编辑器编辑的所有资源放在此文件中。
 
 /////////////////////////////////////////////////////////////////////////////
@@ -39,17 +39,17 @@ MainFrm.h, MainFrm.cpp
 
 res\Toolbar.bmp
     此位图文件用于为工具栏创建平铺图像。
-    初始工具栏和状态栏在 CMainFrame 类中构造。使用资源编辑器编辑此工具栏位图，并更新 example9_1.rc 中的 IDR_MAINFRAME TOOLBAR 数组以添加工具栏按钮。
+    初始工具栏和状态栏在 CMainFrame 类中构造。使用资源编辑器编辑此工具栏位图，并更新 MFC0.rc 中的 IDR_MAINFRAME TOOLBAR 数组以添加工具栏按钮。
 /////////////////////////////////////////////////////////////////////////////
 
 应用程序向导创建一种文档类型和一个视图：
 
-example9_1Doc.h、example9_1Doc.cpp - 文档
-    这些文件包含 Cexample9_1Doc 类。编辑这些文件以添加特殊文档数据并实现文件保存和加载（通过 Cexample9_1Doc::Serialize）。
+MFC0Doc.h、MFC0Doc.cpp - 文档
+    这些文件包含 CMFC0Doc 类。编辑这些文件以添加特殊文档数据并实现文件保存和加载（通过 CMFC0Doc::Serialize）。
 
-example9_1View.h、example9_1View.cpp - 文档视图
-    这些文件包含 Cexample9_1View 类。
-    Cexample9_1View 对象用于查看 Cexample9_1Doc 对象。
+MFC0View.h、MFC0View.cpp - 文档视图
+    这些文件包含 CMFC0View 类。
+    CMFC0View 对象用于查看 CMFC0Doc 对象。
 
 
 
@@ -66,12 +66,12 @@ ActiveX 控件
 其他标准文件:
 
 StdAfx.h, StdAfx.cpp
-    这些文件用于生成名为 example9_1.pch 的预编译头 (PCH) 文件和名为 StdAfx.obj 的预编译类型文件。
+    这些文件用于生成名为 MFC0.pch 的预编译头 (PCH) 文件和名为 StdAfx.obj 的预编译类型文件。
 
 Resource.h
     这是标准头文件，可用于定义新的资源 ID。Microsoft Visual C++ 将读取并更新此文件。
 
-example9_1.manifest
+MFC0.manifest
 	Windows XP 使用应用程序清单文件来描述特定版本的并行程序集的应用程序依赖项。加载程序使用这些信息来从程序集缓存中加载相应的程序集，并保护其不被应用程序访问。应用程序清单可能会包含在内，以作为与应用程序可执行文件安装在同一文件夹中的外部 .manifest 文件进行重新分发，它还可能以资源的形式包含在可执行文件中。
 /////////////////////////////////////////////////////////////////////////////
 

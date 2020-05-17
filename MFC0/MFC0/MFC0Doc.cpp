@@ -1,15 +1,15 @@
 
-// example9_1Doc.cpp : Cexample9_1Doc 类的实现
+// MFC0Doc.cpp : CMFC0Doc 类的实现
 //
 
 #include "stdafx.h"
 // SHARED_HANDLERS 可以在实现预览、缩略图和搜索筛选器句柄的
 // ATL 项目中进行定义，并允许与该项目共享文档代码。
 #ifndef SHARED_HANDLERS
-#include "example9_1.h"
+#include "MFC0.h"
 #endif
 
-#include "example9_1Doc.h"
+#include "MFC0Doc.h"
 
 #include <propkey.h>
 
@@ -17,27 +17,27 @@
 #define new DEBUG_NEW
 #endif
 
-// Cexample9_1Doc
+// CMFC0Doc
 
-IMPLEMENT_DYNCREATE(Cexample9_1Doc, CDocument)
+IMPLEMENT_DYNCREATE(CMFC0Doc, CDocument)
 
-BEGIN_MESSAGE_MAP(Cexample9_1Doc, CDocument)
+BEGIN_MESSAGE_MAP(CMFC0Doc, CDocument)
 END_MESSAGE_MAP()
 
 
-// Cexample9_1Doc 构造/析构
+// CMFC0Doc 构造/析构
 
-Cexample9_1Doc::Cexample9_1Doc()
+CMFC0Doc::CMFC0Doc()
 {
 	// TODO: 在此添加一次性构造代码
 
 }
 
-Cexample9_1Doc::~Cexample9_1Doc()
+CMFC0Doc::~CMFC0Doc()
 {
 }
 
-BOOL Cexample9_1Doc::OnNewDocument()
+BOOL CMFC0Doc::OnNewDocument()
 {
 	if (!CDocument::OnNewDocument())
 		return FALSE;
@@ -51,9 +51,9 @@ BOOL Cexample9_1Doc::OnNewDocument()
 
 
 
-// Cexample9_1Doc 序列化
+// CMFC0Doc 序列化
 
-void Cexample9_1Doc::Serialize(CArchive& ar)
+void CMFC0Doc::Serialize(CArchive& ar)
 {
 	if (ar.IsStoring())
 	{
@@ -68,7 +68,7 @@ void Cexample9_1Doc::Serialize(CArchive& ar)
 #ifdef SHARED_HANDLERS
 
 // 缩略图的支持
-void Cexample9_1Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
+void CMFC0Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 {
 	// 修改此代码以绘制文档数据
 	dc.FillSolidRect(lprcBounds, RGB(255, 255, 255));
@@ -89,7 +89,7 @@ void Cexample9_1Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 }
 
 // 搜索处理程序的支持
-void Cexample9_1Doc::InitializeSearchContent()
+void CMFC0Doc::InitializeSearchContent()
 {
 	CString strSearchContent;
 	// 从文档数据设置搜索内容。
@@ -99,7 +99,7 @@ void Cexample9_1Doc::InitializeSearchContent()
 	SetSearchContent(strSearchContent);
 }
 
-void Cexample9_1Doc::SetSearchContent(const CString& value)
+void CMFC0Doc::SetSearchContent(const CString& value)
 {
 	if (value.IsEmpty())
 	{
@@ -119,19 +119,19 @@ void Cexample9_1Doc::SetSearchContent(const CString& value)
 
 #endif // SHARED_HANDLERS
 
-// Cexample9_1Doc 诊断
+// CMFC0Doc 诊断
 
 #ifdef _DEBUG
-void Cexample9_1Doc::AssertValid() const
+void CMFC0Doc::AssertValid() const
 {
 	CDocument::AssertValid();
 }
 
-void Cexample9_1Doc::Dump(CDumpContext& dc) const
+void CMFC0Doc::Dump(CDumpContext& dc) const
 {
 	CDocument::Dump(dc);
 }
 #endif //_DEBUG
 
 
-// Cexample9_1Doc 命令
+// CMFC0Doc 命令

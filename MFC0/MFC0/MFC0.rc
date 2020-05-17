@@ -52,7 +52,7 @@ BEGIN
     "\r\n"
     "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
     "LANGUAGE 4, 2\r\n"
-    "#include ""res\\example9_1.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""res\\MFC0.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
     "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
     "#endif\r\n"
     "\0"
@@ -68,9 +68,9 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDR_MAINFRAME           ICON                    "res\\example9_1.ico"
+IDR_MAINFRAME           ICON                    "res\\MFC0.ico"
 
-IDR_example9_1TYPE      ICON                    "res\\example9_1Doc.ico"
+IDR_MFC0TYPE            ICON                    "res\\MFC0Doc.ico"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -115,7 +115,7 @@ BEGIN
         MENUITEM "保存(&S)\tCtrl+S",              ID_FILE_SAVE
         MENUITEM "另存为(&A)...",                  ID_FILE_SAVE_AS
         MENUITEM SEPARATOR
-        MENUITEM "最近的文件",                       ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM "最近的文件",                       ID_FILE_MRU_FILE1
         MENUITEM SEPARATOR
         MENUITEM "退出(&X)",                      ID_APP_EXIT
     END
@@ -131,11 +131,11 @@ BEGIN
     BEGIN
         MENUITEM "工具栏(&T)",                     ID_VIEW_TOOLBAR
         MENUITEM "状态栏(&S)",                     ID_VIEW_STATUS_BAR
-        MENUITEM "弹出对话框",                       ID_Push
+        MENUITEM "弹出对话框",                       ID_PutMyDlg2
     END
     POPUP "帮助(&H)"
     BEGIN
-        MENUITEM "关于 example9_1(&A)...",        ID_APP_ABOUT
+        MENUITEM "关于 MFC0(&A)...",              ID_APP_ABOUT
     END
 END
 
@@ -170,11 +170,11 @@ END
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "关于 example9_1"
+CAPTION "关于 MFC0"
 FONT 9, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
-    LTEXT           "example9_1，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "MFC0，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
     LTEXT           "Copyright (C) 2020",IDC_STATIC,42,26,114,8
     DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
 END
@@ -186,9 +186,8 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "确定",IDOK,199,155,50,14
     PUSHBUTTON      "取消",IDCANCEL,253,155,50,14
-    PUSHBUTTON      "选择文件",IDC_BUTTON1,227,49,50,14
-    EDITTEXT        IDC_EDIT2,32,50,181,17,ES_AUTOHSCROLL | ES_READONLY
-    LISTBOX         IDC_LIST1,32,73,180,40,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "打开文件",IDC_BUTTON1,213,58,50,14
+    EDITTEXT        IDC_EDIT1,43,57,150,16,ES_AUTOHSCROLL
 END
 
 IDD_DIALOG2 DIALOGEX 0, 0, 310, 176
@@ -198,9 +197,9 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "确定",IDOK,199,155,50,14
     PUSHBUTTON      "取消",IDCANCEL,253,155,50,14
-    PUSHBUTTON      "显示名字",IDC_BUTTON1,215,48,57,19
-    EDITTEXT        IDC_EDIT1,28,48,167,14,ES_AUTOHSCROLL | ES_READONLY
-    LISTBOX         IDC_LIST1,27,77,168,45,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT1,40,35,129,19,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST1,40,67,129,52,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "显示名字",IDC_BUTTON1,76,137,50,14
 END
 
 
@@ -227,11 +226,11 @@ BEGIN
         BLOCK "080404B0"
         BEGIN
             VALUE "CompanyName", "TODO: <公司名>"
-            VALUE "FileDescription", "example9_1"
+            VALUE "FileDescription", "MFC0"
             VALUE "FileVersion", "1.0.0.1"
-            VALUE "InternalName", "example9_1.exe"
+            VALUE "InternalName", "MFC0.exe"
             VALUE "LegalCopyright", "TODO:  (C) <公司名>。  保留所有权利。"
-            VALUE "OriginalFilename", "example9_1.exe"
+            VALUE "OriginalFilename", "MFC0.exe"
             VALUE "ProductName", "TODO: <产品名>"
             VALUE "ProductVersion", "1.0.0.1"
         END
@@ -306,12 +305,12 @@ END
 
 STRINGTABLE
 BEGIN
-    IDR_MAINFRAME           "example9_1\n\nexample9_1\n\n\nexample91.Document\nexample9_1.Document"
+    IDR_MAINFRAME           "MFC0\n\nMFC0\n\n\nMFC0.Document\nMFC0.Document"
 END
 
 STRINGTABLE
 BEGIN
-    AFX_IDS_APP_TITLE       "example9_1"
+    AFX_IDS_APP_TITLE       "MFC0"
     AFX_IDS_IDLEMESSAGE     "就绪"
 END
 
@@ -425,7 +424,7 @@ END
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE 4, 2
-#include "res\example9_1.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "res\MFC0.rc2"  // 非 Microsoft Visual C++ 编辑的资源
 #include "l.CHS\afxres.rc"      // 标准组件
 #endif
 

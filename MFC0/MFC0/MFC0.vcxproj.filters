@@ -18,7 +18,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="example9_1.h">
+    <ClInclude Include="MFC0.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
@@ -30,16 +30,16 @@
     <ClInclude Include="MainFrm.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="example9_1Doc.h">
+    <ClInclude Include="MFC0Doc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="example9_1View.h">
+    <ClInclude Include="MFC0View.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="MyDlg.h">
+    <ClInclude Include="MyDlg1.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="MyDlg2.h">
@@ -47,7 +47,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="example9_1.cpp">
+    <ClCompile Include="MFC0.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
@@ -56,13 +56,13 @@
     <ClCompile Include="MainFrm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="example9_1Doc.cpp">
+    <ClCompile Include="MFC0Doc.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="example9_1View.cpp">
+    <ClCompile Include="MFC0View.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MyDlg.cpp">
+    <ClCompile Include="MyDlg1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MyDlg2.cpp">
@@ -70,20 +70,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="example9_1.rc">
+    <ResourceCompile Include="MFC0.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\example9_1.rc2">
+    <None Include="res\MFC0.rc2">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\example9_1Doc.ico">
+    <Image Include="res\MFC0Doc.ico">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="res\example9_1.ico">
+    <Image Include="res\MFC0.ico">
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\Toolbar.bmp">

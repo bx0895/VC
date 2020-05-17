@@ -3,7 +3,7 @@
 //
 
 #include "stdafx.h"
-#include "example9_1.h"
+#include "MFC0.h"
 
 #include "MainFrm.h"
 

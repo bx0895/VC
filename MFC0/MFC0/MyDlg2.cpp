@@ -2,13 +2,12 @@
 //
 
 #include "stdafx.h"
-#include "example9_1.h"
+#include "MFC0.h"
 #include "MyDlg2.h"
 #include "afxdialogex.h"
-#include "MyDlg.h"
-
-
-
+#include "MyDlg1.h"
+#include "MFC0Doc.h"
+#include "MFC0View.h"
 
 // MyDlg2 对话框
 
@@ -16,7 +15,7 @@ IMPLEMENT_DYNAMIC(MyDlg2, CDialogEx)
 
 MyDlg2::MyDlg2(CWnd* pParent /*=NULL*/)
 	: CDialogEx(IDD_DIALOG2, pParent)
-	, put(_T(""))
+	, str(_T(""))
 {
 
 }
@@ -28,8 +27,8 @@ MyDlg2::~MyDlg2()
 void MyDlg2::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
-	DDX_Text(pDX, IDC_EDIT1, put);
-	DDX_Control(pDX, IDC_LIST1, LBox);
+	DDX_Text(pDX, IDC_EDIT1, str);
+	DDX_Control(pDX, IDC_LIST1, Lbox);
 }
 
 
@@ -44,5 +43,6 @@ END_MESSAGE_MAP()
 void MyDlg2::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	UpdateData(true);
 	
 }

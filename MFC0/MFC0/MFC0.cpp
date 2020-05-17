@@ -1,34 +1,34 @@
 
-// example9_1.cpp : 定义应用程序的类行为。
+// MFC0.cpp : 定义应用程序的类行为。
 //
 
 #include "stdafx.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"
-#include "example9_1.h"
+#include "MFC0.h"
 #include "MainFrm.h"
 
-#include "example9_1Doc.h"
-#include "example9_1View.h"
+#include "MFC0Doc.h"
+#include "MFC0View.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// Cexample9_1App
+// CMFC0App
 
-BEGIN_MESSAGE_MAP(Cexample9_1App, CWinApp)
-	ON_COMMAND(ID_APP_ABOUT, &Cexample9_1App::OnAppAbout)
+BEGIN_MESSAGE_MAP(CMFC0App, CWinApp)
+	ON_COMMAND(ID_APP_ABOUT, &CMFC0App::OnAppAbout)
 	// 基于文件的标准文档命令
 	ON_COMMAND(ID_FILE_NEW, &CWinApp::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
 END_MESSAGE_MAP()
 
 
-// Cexample9_1App 构造
+// CMFC0App 构造
 
-Cexample9_1App::Cexample9_1App()
+CMFC0App::CMFC0App()
 {
 	// 支持重新启动管理器
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
@@ -41,20 +41,20 @@ Cexample9_1App::Cexample9_1App()
 
 	// TODO: 将以下应用程序 ID 字符串替换为唯一的 ID 字符串；建议的字符串格式
 	//为 CompanyName.ProductName.SubProduct.VersionInformation
-	SetAppID(_T("example9_1.AppID.NoVersion"));
+	SetAppID(_T("MFC0.AppID.NoVersion"));
 
 	// TODO: 在此处添加构造代码，
 	// 将所有重要的初始化放置在 InitInstance 中
 }
 
-// 唯一的一个 Cexample9_1App 对象
+// 唯一的一个 CMFC0App 对象
 
-Cexample9_1App theApp;
+CMFC0App theApp;
 
 
-// Cexample9_1App 初始化
+// CMFC0App 初始化
 
-BOOL Cexample9_1App::InitInstance()
+BOOL CMFC0App::InitInstance()
 {
 	// 如果一个运行在 Windows XP 上的应用程序清单指定要
 	// 使用 ComCtl32.dll 版本 6 或更高版本来启用可视化方式，
@@ -99,9 +99,9 @@ BOOL Cexample9_1App::InitInstance()
 	CSingleDocTemplate* pDocTemplate;
 	pDocTemplate = new CSingleDocTemplate(
 		IDR_MAINFRAME,
-		RUNTIME_CLASS(Cexample9_1Doc),
+		RUNTIME_CLASS(CMFC0Doc),
 		RUNTIME_CLASS(CMainFrame),       // 主 SDI 框架窗口
-		RUNTIME_CLASS(Cexample9_1View));
+		RUNTIME_CLASS(CMFC0View));
 	if (!pDocTemplate)
 		return FALSE;
 	AddDocTemplate(pDocTemplate);
@@ -124,7 +124,7 @@ BOOL Cexample9_1App::InitInstance()
 	return TRUE;
 }
 
-int Cexample9_1App::ExitInstance()
+int CMFC0App::ExitInstance()
 {
 	//TODO: 处理可能已添加的附加资源
 	AfxOleTerm(FALSE);
@@ -132,7 +132,7 @@ int Cexample9_1App::ExitInstance()
 	return CWinApp::ExitInstance();
 }
 
-// Cexample9_1App 消息处理程序
+// CMFC0App 消息处理程序
 
 
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
@@ -168,13 +168,13 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 // 用于运行对话框的应用程序命令
-void Cexample9_1App::OnAppAbout()
+void CMFC0App::OnAppAbout()
 {
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
 }
 
-// Cexample9_1App 消息处理程序
+// CMFC0App 消息处理程序
 
 
 

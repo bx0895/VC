@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{13496A2C-8DA9-49BB-AD00-ED38144A9C37}</ProjectGuid>
-    <RootNamespace>example9_1</RootNamespace>
+    <ProjectGuid>{2D02379F-4715-495B-877E-CA34E5AA40CF}</ProjectGuid>
+    <RootNamespace>MFC0</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
     <Keyword>MFCProj</Keyword>
   </PropertyGroup>
@@ -189,22 +189,22 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="example9_1.h" />
-    <ClInclude Include="example9_1Doc.h" />
-    <ClInclude Include="example9_1View.h" />
     <ClInclude Include="MainFrm.h" />
-    <ClInclude Include="MyDlg.h" />
+    <ClInclude Include="MFC0.h" />
+    <ClInclude Include="MFC0Doc.h" />
+    <ClInclude Include="MFC0View.h" />
+    <ClInclude Include="MyDlg1.h" />
     <ClInclude Include="MyDlg2.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="example9_1.cpp" />
-    <ClCompile Include="example9_1Doc.cpp" />
-    <ClCompile Include="example9_1View.cpp" />
     <ClCompile Include="MainFrm.cpp" />
-    <ClCompile Include="MyDlg.cpp" />
+    <ClCompile Include="MFC0.cpp" />
+    <ClCompile Include="MFC0Doc.cpp" />
+    <ClCompile Include="MFC0View.cpp" />
+    <ClCompile Include="MyDlg1.cpp" />
     <ClCompile Include="MyDlg2.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -214,14 +214,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="example9_1.rc" />
+    <ResourceCompile Include="MFC0.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\example9_1.rc2" />
+    <None Include="res\MFC0.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\example9_1.ico" />
-    <Image Include="res\example9_1Doc.ico" />
+    <Image Include="res\MFC0.ico" />
+    <Image Include="res\MFC0Doc.ico" />
     <Image Include="res\Toolbar.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
@@ -229,7 +229,7 @@
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties RESOURCE_FILE="example9_1.rc" />
+      <UserProperties RESOURCE_FILE="MFC0.rc" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
