@@ -18,7 +18,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AMFC9-2.h">
+    <ClInclude Include="AMFC10_2.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
@@ -30,10 +30,13 @@
     <ClInclude Include="MainFrm.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="AMFC9-2Doc.h">
+    <ClInclude Include="AMFC10_2Doc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="AMFC9-2View.h">
+    <ClInclude Include="AMFC10_2View.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AMFC10_2Set.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
@@ -41,7 +44,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AMFC9-2.cpp">
+    <ClCompile Include="AMFC10_2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
@@ -50,28 +53,31 @@
     <ClCompile Include="MainFrm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="AMFC9-2Doc.cpp">
+    <ClCompile Include="AMFC10_2Doc.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="AMFC9-2View.cpp">
+    <ClCompile Include="AMFC10_2View.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AMFC10_2Set.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="AMFC9-2.rc">
+    <ResourceCompile Include="AMFC10_2.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\AMFC92.rc2">
+    <None Include="res\AMFC10_2.rc2">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\AMFC9-2Doc.ico">
+    <Image Include="res\AMFC10_2Doc.ico">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="res\AMFC9-2.ico">
+    <Image Include="res\AMFC10_2.ico">
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\Toolbar.bmp">

@@ -1,34 +1,32 @@
 
-// AMFC9-2.cpp : 定义应用程序的类行为。
+// AMFC10_2.cpp : 定义应用程序的类行为。
 //
 
 #include "stdafx.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"
-#include "AMFC9-2.h"
+#include "AMFC10_2.h"
 #include "MainFrm.h"
 
-#include "AMFC9-2Doc.h"
-#include "AMFC9-2View.h"
+#include "AMFC10_2Set.h"
+#include "AMFC10_2Doc.h"
+#include "AMFC10_2View.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CAMFC92App
+// CAMFC10_2App
 
-BEGIN_MESSAGE_MAP(CAMFC92App, CWinApp)
-	ON_COMMAND(ID_APP_ABOUT, &CAMFC92App::OnAppAbout)
-	// 基于文件的标准文档命令
-	ON_COMMAND(ID_FILE_NEW, &CWinApp::OnFileNew)
-	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
+BEGIN_MESSAGE_MAP(CAMFC10_2App, CWinApp)
+	ON_COMMAND(ID_APP_ABOUT, &CAMFC10_2App::OnAppAbout)
 END_MESSAGE_MAP()
 
 
-// CAMFC92App 构造
+// CAMFC10_2App 构造
 
-CAMFC92App::CAMFC92App()
+CAMFC10_2App::CAMFC10_2App()
 {
 	// 支持重新启动管理器
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
@@ -41,20 +39,20 @@ CAMFC92App::CAMFC92App()
 
 	// TODO: 将以下应用程序 ID 字符串替换为唯一的 ID 字符串；建议的字符串格式
 	//为 CompanyName.ProductName.SubProduct.VersionInformation
-	SetAppID(_T("AMFC9-2.AppID.NoVersion"));
+	SetAppID(_T("AMFC10_2.AppID.NoVersion"));
 
 	// TODO: 在此处添加构造代码，
 	// 将所有重要的初始化放置在 InitInstance 中
 }
 
-// 唯一的一个 CAMFC92App 对象
+// 唯一的一个 CAMFC10_2App 对象
 
-CAMFC92App theApp;
+CAMFC10_2App theApp;
 
 
-// CAMFC92App 初始化
+// CAMFC10_2App 初始化
 
-BOOL CAMFC92App::InitInstance()
+BOOL CAMFC10_2App::InitInstance()
 {
 	// 如果一个运行在 Windows XP 上的应用程序清单指定要
 	// 使用 ComCtl32.dll 版本 6 或更高版本来启用可视化方式，
@@ -99,9 +97,9 @@ BOOL CAMFC92App::InitInstance()
 	CSingleDocTemplate* pDocTemplate;
 	pDocTemplate = new CSingleDocTemplate(
 		IDR_MAINFRAME,
-		RUNTIME_CLASS(CAMFC92Doc),
+		RUNTIME_CLASS(CAMFC10_2Doc),
 		RUNTIME_CLASS(CMainFrame),       // 主 SDI 框架窗口
-		RUNTIME_CLASS(CAMFC92View));
+		RUNTIME_CLASS(CAMFC10_2View));
 	if (!pDocTemplate)
 		return FALSE;
 	AddDocTemplate(pDocTemplate);
@@ -124,7 +122,7 @@ BOOL CAMFC92App::InitInstance()
 	return TRUE;
 }
 
-int CAMFC92App::ExitInstance()
+int CAMFC10_2App::ExitInstance()
 {
 	//TODO: 处理可能已添加的附加资源
 	AfxOleTerm(FALSE);
@@ -132,7 +130,7 @@ int CAMFC92App::ExitInstance()
 	return CWinApp::ExitInstance();
 }
 
-// CAMFC92App 消息处理程序
+// CAMFC10_2App 消息处理程序
 
 
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
@@ -168,13 +166,13 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 // 用于运行对话框的应用程序命令
-void CAMFC92App::OnAppAbout()
+void CAMFC10_2App::OnAppAbout()
 {
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
 }
 
-// CAMFC92App 消息处理程序
+// CAMFC10_2App 消息处理程序
 
 
 

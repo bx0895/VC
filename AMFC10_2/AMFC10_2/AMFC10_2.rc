@@ -46,8 +46,9 @@ BEGIN
     "\r\n"
     "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
     "LANGUAGE 4, 2\r\n"
-    "#include ""res\\AMFC92.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""res\\AMFC10_2.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
     "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#include ""l.CHS\\afxdb.rc""        // 数据库资源\r\n"
     "#endif\r\n"
     "\0"
 END
@@ -65,8 +66,8 @@ END
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE 4, 2
-IDR_MAINFRAME           ICON         "res\\AMFC9-2.ico"
-IDR_AMFC92TYPE         ICON         "res\\AMFC9-2Doc.ico"
+IDR_MAINFRAME           ICON         "res\\AMFC10_2.ico"
+IDR_AMFC10_2TYPE         ICON         "res\\AMFC10_2Doc.ico"
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
@@ -83,15 +84,17 @@ IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
 
 IDR_MAINFRAME TOOLBAR 16, 15
 BEGIN
-    BUTTON      ID_FILE_NEW
-    BUTTON      ID_FILE_OPEN
-    BUTTON      ID_FILE_SAVE
-    SEPARATOR
     BUTTON      ID_EDIT_CUT
     BUTTON      ID_EDIT_COPY
     BUTTON      ID_EDIT_PASTE
     SEPARATOR
     BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_RECORD_FIRST
+    BUTTON      ID_RECORD_PREV
+    BUTTON      ID_RECORD_NEXT
+    BUTTON      ID_RECORD_LAST
+    SEPARATOR
     BUTTON      ID_APP_ABOUT
 END
 
@@ -108,13 +111,6 @@ IDR_MAINFRAME MENU
 BEGIN
     POPUP "文件(&F)"
     BEGIN
-        MENUITEM "新建(&N)\tCtrl+N",                ID_FILE_NEW
-        MENUITEM "打开(&O)...\tCtrl+O",            ID_FILE_OPEN
-        MENUITEM "保存(&S)\tCtrl+S",               ID_FILE_SAVE
-        MENUITEM "另存为(&A)...",                 ID_FILE_SAVE_AS
-        MENUITEM SEPARATOR
-        MENUITEM "最近的文件",                 ID_FILE_MRU_FILE1,GRAYED
-        MENUITEM SEPARATOR
         MENUITEM "退出(&X)",                       ID_APP_EXIT
     END
     POPUP "编辑(&E)"
@@ -125,6 +121,13 @@ BEGIN
         MENUITEM "复制(&C)\tCtrl+C",               ID_EDIT_COPY
         MENUITEM "粘贴(&P)\tCtrl+V",              ID_EDIT_PASTE
     END
+    POPUP "记录(&R)"
+    BEGIN
+        MENUITEM "第一条记录(&F)"                ID_RECORD_FIRST
+        MENUITEM "上一条记录(&P)"                ID_RECORD_PREV
+        MENUITEM "下一条记录(&N)"                    ID_RECORD_NEXT
+        MENUITEM "最后一条记录(&L)"                    ID_RECORD_LAST
+    END
     POPUP "视图(&V)"
     BEGIN
         MENUITEM "工具栏(&T)",                    ID_VIEW_TOOLBAR
@@ -132,7 +135,7 @@ BEGIN
     END
     POPUP "帮助(&H)"
     BEGIN
-        MENUITEM "关于 AMFC9-2(&A)...",          ID_APP_ABOUT
+        MENUITEM "关于 AMFC10_2(&A)...",          ID_APP_ABOUT
     END
 END
 
@@ -145,9 +148,6 @@ END
 
 IDR_MAINFRAME ACCELERATORS
 BEGIN
-    "N",            ID_FILE_NEW,            VIRTKEY,CONTROL
-    "O",            ID_FILE_OPEN,           VIRTKEY,CONTROL
-    "S",            ID_FILE_SAVE,           VIRTKEY,CONTROL
 	"Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL
 	"X",            ID_EDIT_CUT,            VIRTKEY,CONTROL
 	"C",            ID_EDIT_COPY,           VIRTKEY,CONTROL
@@ -170,15 +170,22 @@ END
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "关于 AMFC9-2"
+CAPTION "关于 AMFC10_2"
 FONT 9, "MS Shell Dlg"
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
-    LTEXT           "AMFC9-2，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "AMFC10_2，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
     LTEXT           "Copyright (C) 2020",IDC_STATIC,42,26,114,8
     DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
 END
 
+IDD_AMFC10_2_FORM    DIALOGEX  0, 0, 320, 200
+STYLE DS_SHELLFONT | WS_CHILD
+FONT 9, "MS Shell Dlg"
+BEGIN
+    LTEXT    "TODO: 将窗体控件放置在此对话框上。",IDC_STATIC,24,42,
+        280,8
+END
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -204,11 +211,11 @@ BEGIN
         BLOCK "080404B0"
         BEGIN
             VALUE "CompanyName", "TODO: <公司名>"
-            VALUE "FileDescription", "AMFC9-2"
+            VALUE "FileDescription", "AMFC10_2"
             VALUE "FileVersion",     "1.0.0.1"
-            VALUE "InternalName",    "AMFC9-2.exe"
+            VALUE "InternalName",    "AMFC10_2.exe"
             VALUE "LegalCopyright", "TODO:  (C) <公司名>。  保留所有权利。"
-            VALUE "OriginalFilename","AMFC9-2.exe"
+            VALUE "OriginalFilename","AMFC10_2.exe"
             VALUE "ProductName", "TODO: <产品名>"
             VALUE "ProductVersion",  "1.0.0.1"
         END
@@ -234,6 +241,13 @@ BEGIN
         TOPMARGIN, 7
         BOTTOMMARGIN, 55
     END
+    IDD_AMFC10_2_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
 END
 #endif    // APSTUDIO_INVOKED
 
@@ -245,16 +259,17 @@ END
 STRINGTABLE
 BEGIN
     IDP_OLE_INIT_FAILED       "OLE 初始化失败。  请确保 OLE 库是正确的版本。"
+    IDP_FAILED_OPEN_DATABASE    "无法打开数据库。"
 END
 STRINGTABLE
 BEGIN
 // 非 Mac 应用程序将移除额外的两个子字符串
-    IDR_MAINFRAME           "AMFC9-2\n\nAMFC9-2\n\n\nAMFC92.Document\nAMFC9-2.Document"
+    IDR_MAINFRAME           "AMFC10_2\n\nAMFC10_2\n\n\nAMFC102.Document\nAMFC10_2.Document"
 
 END
 STRINGTABLE
 BEGIN
-    AFX_IDS_APP_TITLE       "AMFC9-2"
+    AFX_IDS_APP_TITLE       "AMFC10_2"
     AFX_IDS_IDLEMESSAGE     "就绪"
 END
 STRINGTABLE
@@ -268,9 +283,6 @@ BEGIN
 END
 STRINGTABLE
 BEGIN
-    ID_FILE_NEW             "创建新文档\n新建"
-    ID_FILE_OPEN            "打开现有文档\n打开"
-    ID_FILE_CLOSE           "关闭活动文档\n关闭"
     ID_FILE_SAVE            "保存活动文档\n保存"
     ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
     ID_APP_ABOUT            "显示程序信息、版本号和版权信息\n关于"
@@ -307,6 +319,10 @@ BEGIN
     ID_EDIT_REDO            "重做上次撤消的操作\n重做"
     ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n切换工具栏"
     ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+    ID_RECORD_NEXT            "移动到下一条记录\n下一条记录"
+    ID_RECORD_PREV            "移动到上一条记录\n上一条记录"
+    ID_RECORD_LAST            "移动到最后一条记录\n最后一条记录"
+    ID_RECORD_FIRST           "移动到第一条记录\n第一条记录"
 END
 
 STRINGTABLE
@@ -337,7 +353,8 @@ END
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE 4, 2
-#include "res\\AMFC92.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "res\\AMFC10_2.rc2"  // 非 Microsoft Visual C++ 编辑的资源
 #include "l.CHS\\afxres.rc"      // 标准组件
+#include "l.CHS\\afxdb.rc"        // 数据库资源
 #endif
 #endif    // 不是 APSTUDIO_INVOKED

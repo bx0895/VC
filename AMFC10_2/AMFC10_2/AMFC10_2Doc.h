@@ -1,19 +1,21 @@
 
-// AMFC9-2Doc.h : CAMFC92Doc 类的接口
+// AMFC10_2Doc.h : CAMFC10_2Doc 类的接口
 //
 
 
 #pragma once
+#include "AMFC10_2Set.h"
 
 
-class CAMFC92Doc : public CDocument
+class CAMFC10_2Doc : public CDocument
 {
 protected: // 仅从序列化创建
-	CAMFC92Doc();
-	DECLARE_DYNCREATE(CAMFC92Doc)
+	CAMFC10_2Doc();
+	DECLARE_DYNCREATE(CAMFC10_2Doc)
 
 // 特性
 public:
+	CAMFC10_2Set m_AMFC10_2Set;
 
 // 操作
 public:
@@ -21,7 +23,6 @@ public:
 // 重写
 public:
 	virtual BOOL OnNewDocument();
-	virtual void Serialize(CArchive& ar);
 #ifdef SHARED_HANDLERS
 	virtual void InitializeSearchContent();
 	virtual void OnDrawThumbnail(CDC& dc, LPRECT lprcBounds);
@@ -29,7 +30,7 @@ public:
 
 // 实现
 public:
-	virtual ~CAMFC92Doc();
+	virtual ~CAMFC10_2Doc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

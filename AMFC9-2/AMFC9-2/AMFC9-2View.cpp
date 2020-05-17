@@ -87,21 +87,16 @@ void CAMFC92View::OnLButtonDown(UINT nFlags, CPoint point)
 	// TODO: 在此添加消息处理程序代码和/或调用默认值
 
 	CView::OnLButtonDown(nFlags, point);
-	CAMFC92Doc* pDoc = GetDocument();
 	CClientDC dc(this);
+	int x1 = 300;  int x2 = 700;
+	int y1 = 200;  int y2 = 400;
 	for (int i = 1; i <= 6; i++)
 	{
-		pDoc->r -= i * 20;
-		pDoc->g -= i * 6;
-		pDoc->b += i * 10;
-		CPen pen(PS_SOLID, 1, RGB(pDoc->r, pDoc->g, pDoc->b));
+		CPen pen(PS_SOLID, 1, RGB(200 - i * 20, 150 - i * 6, i * 14));
 		CPen* pOldPen = dc.SelectObject(&pen);
-	    pDoc->cr.left += i * 15; 
-		pDoc->cr.top +=i * 10; 
-		pDoc->cr.right -=i * 15; 
-		pDoc->cr.bottom -=i * 10;
-		pDoc->ca.Add(pDoc->cr);
-		dc.Ellipse(pDoc->cr);
+		CRect m_crect(x1 +i * 15, y1 + i * 10, x2 - i * 15, y2- i * 10);
+		dc.Ellipse(m_crect);
 		dc.SelectObject(pOldPen);
 	}
+
 }

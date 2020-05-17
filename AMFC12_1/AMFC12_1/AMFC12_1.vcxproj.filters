@@ -18,7 +18,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AMFC9-2.h">
+    <ClInclude Include="AMFC12_1.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
@@ -30,18 +30,24 @@
     <ClInclude Include="MainFrm.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="AMFC9-2Doc.h">
+    <ClInclude Include="AMFC12_1Doc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="AMFC9-2View.h">
+    <ClInclude Include="AMFC12_1View.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AMFC12_1Set.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Mag.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AMFC9-2.cpp">
+    <ClCompile Include="AMFC12_1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
@@ -50,28 +56,34 @@
     <ClCompile Include="MainFrm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="AMFC9-2Doc.cpp">
+    <ClCompile Include="AMFC12_1Doc.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="AMFC9-2View.cpp">
+    <ClCompile Include="AMFC12_1View.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AMFC12_1Set.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Mag.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="AMFC9-2.rc">
+    <ResourceCompile Include="AMFC12_1.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\AMFC92.rc2">
+    <None Include="res\AMFC12_1.rc2">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\AMFC9-2Doc.ico">
+    <Image Include="res\AMFC12_1Doc.ico">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="res\AMFC9-2.ico">
+    <Image Include="res\AMFC12_1.ico">
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\Toolbar.bmp">
