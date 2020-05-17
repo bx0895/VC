@@ -77,6 +77,8 @@ BEGIN_MESSAGE_MAP(CAMFC91Dlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON1, &CAMFC91Dlg::OnBnClickedButton1)
 	ON_WM_LBUTTONDOWN()
+	ON_LBN_SELCHANGE(IDC_LIST1, &CAMFC91Dlg::OnLbnSelchangeList1)
+	ON_BN_CLICKED(IDOK, &CAMFC91Dlg::OnBnClickedOk)
 END_MESSAGE_MAP()
 
 
@@ -178,6 +180,11 @@ HCURSOR CAMFC91Dlg::OnQueryDragIcon()
 void CAMFC91Dlg::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	UpdateData(true);
+	chang = str;
+	Lbox.DeleteString(n);
+	Lbox.AddString(chang);
+	UpdateData(true);
 }
 
 
@@ -195,9 +202,31 @@ void CAMFC91Dlg::OnBnClickedButton1()
 void CAMFC91Dlg::OnLButtonDown(UINT nFlags, CPoint point)
 {
 	// TODO: 在此添加消息处理程序代码和/或调用默认值
+	
+	CDialogEx::OnLButtonDown(nFlags, point);
+}
+
+
+void CAMFC91Dlg::OnLbnSelchangeList1()
+{
+	// TODO: 在此添加控件通知处理程序代码
 	s = "";
-	int n = Lbox.GetCurSel();
+	n = Lbox.GetCurSel();
 	Lbox.GetText(n, s);
 	SetDlgItemTextW(IDC_EDIT1, s);
-	CDialogEx::OnLButtonDown(nFlags, point);
+}
+
+
+void CAMFC91Dlg::OnBnClickedOk()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	CDialogEx::OnOK();
+	ofstream ofs("D:\\学生名单.txt");
+	for (int i = 0; i < Lbox.GetCount(); i++)
+	{
+		Lbox.GetText(i, s);
+		ofs << CT2A(s.GetString()) << endl;
+  
+	}
+		
 }

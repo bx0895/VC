@@ -35,7 +35,11 @@ protected:
 public:
 	CString str;
 	CString s;
+	CString chang;
+	int n;
 	afx_msg void OnBnClickedButton1();
 	CListBox Lbox;
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnLbnSelchangeList1();
+	afx_msg void OnBnClickedOk();
 };
