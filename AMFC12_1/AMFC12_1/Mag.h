@@ -1,5 +1,7 @@
 #pragma once
-
+#include "MainFrm.h"
+#include "AMFC12_1Set.h"
+#include "AMFC12_1Doc.h"
 
 // CMag 对话框
 
@@ -16,12 +18,14 @@ public:
 	enum { IDD = IDD_DIALOG1 };
 #endif
 
-	//CAMFC12_1Set* m_pSet;
+	
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
 
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedButton1();
-	
+	CAMFC12_1Set* m_pSet;
+//	CAMFC12_1Set*
+//		virtual BOOL OnInitDialog();
 };

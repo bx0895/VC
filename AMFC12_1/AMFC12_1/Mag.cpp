@@ -22,6 +22,7 @@ CMag::CMag(CWnd* pParent /*=NULL*/)
 
 CMag::~CMag()
 {
+	
 }
 
 void CMag::DoDataExchange(CDataExchange* pDX)
@@ -41,8 +42,6 @@ END_MESSAGE_MAP()
 void CMag::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	/*
-	m_pSet = &GetDocument()->m_AMFC12_1Set;
 	CImage img;
 	img.Load(m_pSet->m_6);
 	CRect cr;
@@ -50,7 +49,6 @@ void CMag::OnBnClickedButton1()
 	int x, y, w, h;
 	CRect rect;
 	GetDlgItem(IDC_STATIC)->GetClientRect(&rect);
-
 	float rect_ratio = 1.0*rect.Width() / rect.Height();
 	float img_ratio = 1.0*img.GetWidth() / img.GetHeight();
 	if (rect_ratio > img_ratio)
@@ -70,5 +68,16 @@ void CMag::OnBnClickedButton1()
 	pDC->SetStretchBltMode(HALFTONE);
 	img.Draw(pDC->m_hDC, x, y, w, h);
 	ReleaseDC(pDC);
-	*/
+	
 }
+
+
+//BOOL CMag::OnInitDialog()
+//{
+//	CDialogEx::OnInitDialog();
+//
+//	// TODO:  在此添加额外的初始化
+//
+//	return TRUE;  // return TRUE unless you set the focus to a control
+//				  // 异常: OCX 属性页应返回 FALSE
+//}
