@@ -22,6 +22,7 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 public:
+	CString s;
 	CString str;
 	CListBox Lbox;
 	afx_msg void OnBnClickedButton1();

@@ -105,6 +105,7 @@ void CMFC0View::OnPutmydlg2()
 {
 	// TODO: 在此添加命令处理程序代码
 	MyDlg2 dlg;
+	dlg.s = filename;
 	int r = dlg.DoModal();
 	if (r == IDOK)
 	{
