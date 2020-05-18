@@ -33,6 +33,7 @@ void CMag::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CMag, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON1, &CMag::OnBnClickedButton1)
+	ON_WM_PAINT()
 END_MESSAGE_MAP()
 
 
@@ -42,8 +43,29 @@ END_MESSAGE_MAP()
 void CMag::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	
+	
+}
+
+
+//BOOL CMag::OnInitDialog()
+//{
+//	CDialogEx::OnInitDialog();
+//
+//	// TODO:  在此添加额外的初始化
+//
+//	return TRUE;  // return TRUE unless you set the focus to a control
+//				  // 异常: OCX 属性页应返回 FALSE
+//}
+
+
+void CMag::OnPaint()
+{
+	CPaintDC dc(this); // device context for painting
+					   // TODO: 在此处添加消息处理程序代码
+					   // 不为绘图消息调用 CDialogEx::OnPaint()
 	CImage img;
-	img.Load(m_pSet->m_6);
+	img.Load(pathname);
 	CRect cr;
 	CDC* pDC = GetDC();
 	int x, y, w, h;
@@ -68,16 +90,4 @@ void CMag::OnBnClickedButton1()
 	pDC->SetStretchBltMode(HALFTONE);
 	img.Draw(pDC->m_hDC, x, y, w, h);
 	ReleaseDC(pDC);
-	
 }
-
-
-//BOOL CMag::OnInitDialog()
-//{
-//	CDialogEx::OnInitDialog();
-//
-//	// TODO:  在此添加额外的初始化
-//
-//	return TRUE;  // return TRUE unless you set the focus to a control
-//				  // 异常: OCX 属性页应返回 FALSE
-//}

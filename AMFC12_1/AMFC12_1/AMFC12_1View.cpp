@@ -118,6 +118,7 @@ void CAMFC12_1View::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	CMag dlg;
+	dlg.pathname = m_pSet->m_6;
 	int r = dlg.DoModal(); 
 	if (r == IDOK) 
 	{

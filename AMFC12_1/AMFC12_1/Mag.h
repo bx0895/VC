@@ -28,4 +28,6 @@ public:
 	CAMFC12_1Set* m_pSet;
 //	CAMFC12_1Set*
 //		virtual BOOL OnInitDialog();
+	afx_msg void OnPaint();
+	CString pathname;
 };
