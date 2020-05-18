@@ -47,9 +47,31 @@ void Mydlg::OnBnClickedButton1()
 	string filename;
 	ifs >> filename;
 
-	CDC *pDC = GetDlgItem(IDC_STATIC)->GetDC();
 	CImage img;
 	img.Load(CString(filename.c_str()));
-	img.Draw(pDC->m_hDC,0,0,img.GetWidth(),img.GetHeight());
+	CDC* pDC = GetDlgItem(IDC_STATIC)->GetDC();
+	int x, y, w, h;
+	CRect rect;
+	GetDlgItem(IDC_STATIC)->GetClientRect(&rect);
+
+	float rect_ratio = 1.0*rect.Width() / rect.Height();
+	float img_ratio = 1.0*img.GetWidth() / img.GetHeight();
+	if (rect_ratio > img_ratio)
+	{
+		h = rect.Height();
+		w = img_ratio*h;
+		x = (rect.Width() - w) / 2;
+		y = 0;
+	}
+	else
+	{
+		w = rect.Width();
+		h = w / img_ratio;
+		x = 0;
+		y = (rect.Height() - h) / 2;
+	}
+	pDC->SetStretchBltMode(HALFTONE);
+	img.Draw(pDC->m_hDC, x, y, w, h);
+	ReleaseDC(pDC);
 
 }
