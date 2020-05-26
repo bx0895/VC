@@ -12,6 +12,7 @@
 #include "AMFC10Doc.h"
 #include "AMFC10View.h"
 #include "win32.h"
+#include"Lib1.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -56,8 +57,17 @@ void CAMFC10View::OnDraw(CDC* pDC)
 
 	// TODO: 在此处为本机数据添加绘制代码
 	CString s;
-	s.Format(_T("%d"), factorial(5));
+	F1 f;
+	s.Format(_T("静态链接库求阶层：%d"), f.factorial(5));
 	pDC->TextOutW(300, 100, s);
+
+	CString ss;
+	CString str;
+	FAC fac;
+	ss.Format(_T("动态链接库求阶层：%d"), factorial(5));
+	str.Format(_T("动态链接库角度转换：%d"), fac.convert(30.0));
+	pDC->TextOutW(300, 200, ss);
+	pDC->TextOutW(300, 300, str);
 }
 
 

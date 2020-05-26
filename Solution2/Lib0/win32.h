@@ -1,9 +1,10 @@
 #pragma once
 
-class F1
+
+ class F1
 {
-	int a;
 public:
+	int a;
 	F1() { a = 1; }
 	int factorial(int n);
 };
