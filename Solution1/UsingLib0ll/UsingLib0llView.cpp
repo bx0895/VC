@@ -58,7 +58,7 @@ void CUsingLib0llView::OnDraw(CDC* pDC)
 		s= CString(pchar());
 		pDC->TextOutW(200, 200, s);
 		CString ss;
-		ss.Format(_T("%d,这是从动态库返回的值。"),GetInt());
+		ss.Format(_T("%d,这是从动态库返回的值"),GetInt());
 		pDC->TextOutW(200, 250, ss);
 	
 }
